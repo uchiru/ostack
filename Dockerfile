@@ -7,3 +7,4 @@ RUN apt-get update && \
   pip install git+https://github.com/openstack/python-cinderclient && \
   pip install git+https://github.com/openstack/python-heatclient && \
   pip install git+https://github.com/openstack/python-openstackclient
+RUN apt-get install vim screen -y
