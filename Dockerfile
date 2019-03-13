@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+RUN echo "empty"
 RUN apt update && \
     apt install -y git vim screen curl \
                   libxml2-dev libxslt1-dev \
