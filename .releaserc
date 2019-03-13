@@ -1,0 +1,7 @@
+project:        ostack
+mode:           simplistic
+version_path:   VERSION
+changelog_path: CHANGELOG.md
+publish: true
+
+# vim: ft=yaml ts=2 sw=2 et
