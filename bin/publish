@@ -1,12 +1,16 @@
 #!/bin/bash
 set -ex
+
+IMAGE=uchiru/ostack:$1
+
 rm -fr .build
+
 git clone git@github.com:uchiru/ostack .build
 pushd .build
 git checkout $1
-docker build  -t quay.io/uchiru/ostack:latest -t quay.io/uchiru/ostack:$1 .
-docker push quay.io/uchiru/ostack:$1
-docker push quay.io/uchiru/ostack:latest
+docker build --build-arg version=$1 -t $IMAGE .
+docker push $IMAGE
 popd
+
 rm -fr .build
 echo "DONE :)"
